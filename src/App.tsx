@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Components/Header/Header';
+import LoadingAnimate from './helper/LoadingAnimate/LoadingAnimate';
 import './index.css';
 
 const App: React.FC = () => {
+  const [isLoadingPage, setIsLoadingPage] = useState<boolean>(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoadingPage(false);
+    }, 1200);
+  }, []);
   return (
     <div>
-      <Header />
+      {isLoadingPage ? (
+        <LoadingAnimate />
+      ) : (
+        <>
+          <Header /> <h1>asd</h1>
+        </>
+      )}
     </div>
   );
 };
