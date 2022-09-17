@@ -8,7 +8,7 @@ const App: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoadingPage(false);
-    }, 1200);
+    }, 1000);
   }, []);
   return (
     <div>

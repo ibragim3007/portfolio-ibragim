@@ -19,32 +19,30 @@ const LoadingAnimate: React.FC = () => {
       <motion.div
         style={{
           background: 'transparent',
-          width: 400,
+          width: 300,
           borderRadius: 50,
           border: '1px solid rgba(255, 255, 255, 0.4)',
           backdropFilter: 'blur(30px) saturate(120%)',
         }}
-        animate={{
-          rotate: [45, -45, 45],
-        }}
         transition={{
           duration: 2.5,
           repeat: Infinity,
+          type: 'easyOut',
         }}
       >
         <motion.div
           style={{
             background:
-              'linear-gradient(270deg, rgba(131,58,180,0.8) 0%, rgba(253,29,29,0.8) 50%, rgba(252,176,69,0.8) 100%)',
+              'linear-gradient(270deg, rgba(131,58,180,0.7) 0%, rgba(253,29,29,0.7) 50%, rgba(252,176,69,0.7) 100%)',
             boxShadow: '-1px 0px 8px -6px rgba(0,0,0,0.8) inset',
-            width: 100,
-            height: 100,
+            width: 50,
+            height: 50,
             borderRadius: 50,
             backdropFilter: 'blur(10px) saturate(200%) brightness(150%)',
           }}
           animate={{
             rotate: [0, 360, 0],
-            x: [0, 300, 0],
+            x: [0, 250, 0],
           }}
           transition={{
             duration: 2.5,
