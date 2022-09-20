@@ -13,7 +13,7 @@ const InformationAboutMe: React.FC = () => {
           color: '#eee',
           fontSize: 28,
           position: 'relative',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
           borderRadius: 6,
           backdropFilter: 'blur(50px) saturate(150%) brightness(160%)',
           padding: '6px 25px',
@@ -50,7 +50,7 @@ const InformationAboutMe: React.FC = () => {
           color: '#eee',
           fontSize: 28,
           position: 'relative',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
           borderRadius: 6,
           backdropFilter: 'blur(50px) saturate(150%) brightness(160%)',
           padding: '6px 24px',
@@ -80,6 +80,44 @@ const InformationAboutMe: React.FC = () => {
         }}
       >
         {CountQuantityOfYears(dateOfMyBirhtDate)} years
+      </motion.div>
+      <motion.div
+        className={'infoMySelfTest'}
+        style={{
+          color: '#eee',
+          fontSize: 28,
+          position: 'relative',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          borderRadius: 6,
+          backdropFilter: 'blur(50px) saturate(150%) brightness(160%)',
+          padding: '6px 24px',
+          top: -25,
+          zIndex: 9990,
+          cursor: 'pointer',
+          display: 'inline-block',
+        }}
+        whileHover={{
+          x: [50, 60, 50],
+          transition: {
+            repeat: Infinity,
+            duration: 1,
+          },
+        }}
+        initial={{
+          opacity: 0,
+          x: -290,
+        }}
+        animate={{
+          opacity: 1,
+          x: 60,
+        }}
+        transition={{
+          delay: 1.4,
+          duration: 2.2,
+          type: 'spring',
+        }}
+      >
+        Frontend Developer
       </motion.div>
     </>
   );

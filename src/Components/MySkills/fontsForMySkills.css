@@ -1,25 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-.mainText {
-    font-family: 'Silkscreen', cursive;
-}
-
-.infoMySelfTest {
-    font-family: 'Roboto', sans-serif;
-}
-
-.textPrinting {
-    width: 28ch;
+.markerFont {
+    font-family: 'Permanent Marker', cursive;
+    width: 9ch;
     color: white;
     font-family: monospace;
     font-size: 30px;
     white-space: nowrap; /* не переносить текст на другую строку */
     overflow: hidden; /* скрываем переполнение контентом */
     border-right: 3px solid white; /* рисуем курсор */
-    animation: cursor 0.75s step-end infinite, printed_text 5s steps(28);
-  }
-  
+    animation: cursor 0.75s step-end infinite, printed_text 3s steps(9);
+}
   @keyframes cursor {
     0% {
       border-color: white;

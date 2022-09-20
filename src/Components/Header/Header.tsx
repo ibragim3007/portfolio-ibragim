@@ -42,7 +42,7 @@ const Header: React.FC = () => {
       <motion.img
         variants={containerVariants}
         initial={{
-          x: -550,
+          x: -650,
           rotateY: -150,
         }}
         animate={{
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
         src={bgMove}
       />
       <Container>
-        <Grid style={{ height: '100vh', alignContent: 'center', paddingTop: 80 }} container>
+        <Grid style={{ height: '100vh', alignContent: 'center', paddingTop: 140 }} container>
           <Grid xs={6} item justifyItems="center">
             <div
               style={{
@@ -109,7 +109,7 @@ const Header: React.FC = () => {
             />
             <InformationAboutMe />
           </Grid>
-          <Grid xs={6} item style={{ marginTop: 40 }}>
+          <Grid xs={6} item style={{ marginTop: 70 }}>
             <Grid style={{ maxWidth: 450 }} item>
               <motion.h1
                 variants={containerVariants}
@@ -123,28 +123,16 @@ const Header: React.FC = () => {
               >
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, rerum.
               </motion.h1>
-              <motion.h3
-                variants={containerVariants}
-                style={{ color: '#ff9e37', marginTop: 50, zIndex: 10 }}
-                className="mainText"
-                initial={{
-                  x: 100,
-                  opacity: 0,
-                }}
-                animate={{
-                  x: 0,
-                  y: [0, 4, 0],
-                  opacity: [0.1, 0.7, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  type: 'spring',
-                }}
-                whileHover="hoverDefault"
-                whileTap="tapDefault"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, eius.
-              </motion.h3>
+              <Grid style={{ marginTop: 50, marginBottom: 0 }}>
+                <h1 className="textPrinting">
+                  <span style={{ color: 'rgb(76, 201, 176)' }}>std</span>
+                  <span style={{ color: 'rgb(212, 212, 212)' }}>::</span>
+                  <span style={{ color: 'rgb(148, 219, 253)' }}>cout</span>
+                  <span style={{ color: 'rgb(220, 220, 170)' }}>{' << '}</span>
+                  <span style={{ color: ' rgb(205, 144, 105)' }}>{'"Hello world!"'}</span>
+                  <span style={{ color: 'rgb(212, 212, 212)' }}>;</span>
+                </h1>
+              </Grid>
             </Grid>
           </Grid>
           <IconsSkills />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Components/Header/Header';
+import MySkillsComponent from './Components/MySkills/MySkillsComponent';
 import LoadingAnimate from './helper/LoadingAnimate/LoadingAnimate';
 import './index.css';
 
@@ -8,7 +9,7 @@ const App: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoadingPage(false);
-    }, 1000);
+    }, 0);
   }, []);
   return (
     <div>
@@ -16,7 +17,8 @@ const App: React.FC = () => {
         <LoadingAnimate />
       ) : (
         <>
-          <Header /> <h1>asd</h1>
+          <Header />
+          <MySkillsComponent />
         </>
       )}
     </div>
