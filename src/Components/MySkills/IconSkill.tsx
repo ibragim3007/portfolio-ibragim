@@ -49,13 +49,12 @@ const IconSkill: React.FC<IconSkillProps> = ({ icon }) => {
         }}
         variants={containerVariants}
         initial={{
-          x: -100,
-          scale: 0.1,
-          opacity: 0.1,
+          scale: 0.0,
+          opacity: 0.0,
         }}
         animate={control}
         transition={{
-          duration: 1.6,
+          duration: 1.8,
           type: 'spring',
         }}
         src={icon.src}

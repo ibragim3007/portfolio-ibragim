@@ -1,14 +1,14 @@
+import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
-import './fontsForMySkills.css';
-import graphQlIcon from '../../Sourse/img/iconsSkills/graphQlIcon.png';
-import reactIcon from '../../Sourse/img/iconsSkills/reactIcon.png';
-import tsIcon from '../../Sourse/img/iconsSkills/tsIcon.png';
+import { containerVariants } from '../../helper/AnimationStyle';
 import cPPIcon from '../../Sourse/img/iconsSkills/c++Icon.png';
 import gitIcon from '../../Sourse/img/iconsSkills/gitIcon.png';
+import graphQlIcon from '../../Sourse/img/iconsSkills/graphQlIcon.png';
 import muiIcon from '../../Sourse/img/iconsSkills/muiIcon.png';
+import reactIcon from '../../Sourse/img/iconsSkills/reactIcon.png';
+import tsIcon from '../../Sourse/img/iconsSkills/tsIcon.png';
+import './fontsForMySkills.css';
 import ShowIcons from './ShowIcons';
-import { motion, useAnimation } from 'framer-motion';
-import { containerVariants } from '../../helper/AnimationStyle';
 
 export interface IIconsSkills {
   article: string;
@@ -65,13 +65,16 @@ const MySkillsComponent: React.FC = () => {
     }
   }, [control, textIsVisible]);
 
+  const refContainerDrag = useRef(null);
+
   return (
     <div
       style={{
-        backgroundColor: 'RGBA(28, 40, 51,1)',
+        backgroundColor: '#002233',
         height: '100vh',
         display: 'grid',
         gridTemplateColumns: '1fr 1fr 1fr',
+        zIndex: -2,
       }}
     >
       <ShowIcons icons={LeftIcons} />
@@ -79,8 +82,8 @@ const MySkillsComponent: React.FC = () => {
         style={{
           width: 550,
           height: 470,
-          background: 'linear-gradient(-120deg, rgba(222,49,99,0.7231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
-          border: '5px solid rgb(222, 49, 99, 1)',
+          background: 'linear-gradient(-120deg, rgba(222,49,99,0.8231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
+          border: '7px solid rgb(222, 49, 99, 1)',
           borderRadius: '93% 102% 120% 86%',
           alignSelf: 'center',
           display: 'flex',
@@ -90,26 +93,35 @@ const MySkillsComponent: React.FC = () => {
         animate={{
           borderRadius: ['94% 102% 120% 86%', '123% 90% 96% 126%', '92% 138% 84% 143%', '93% 102% 120% 86%'],
           background: [
-            'linear-gradient(-120deg, rgba(222,49,99,0.7231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
-            'linear-gradient(120deg, rgba(222,49,99,0.7231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
-            'linear-gradient(-120deg, rgba(222,49,99,0.7231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
+            'linear-gradient(-120deg, rgba(222,49,99,0.8231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
+            'linear-gradient(120deg, rgba(222,49,99,0.8231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
+            'linear-gradient(-120deg, rgba(222,49,99,0.8231486344537815) 18%, rgba(222,49,99,0.3) 100%)',
           ],
         }}
         transition={{
           repeat: Infinity,
-          duration: 6,
+          duration: 7,
           type: 'spring',
         }}
+        ref={refContainerDrag}
       >
         <motion.h1
           className={textIsVisible ? 'markerFont' : ''}
-          style={{ color: '#eee', fontSize: 64, textTransform: 'uppercase' }}
+          style={{
+            color: '#eee',
+            fontSize: 64,
+            textTransform: 'uppercase',
+            cursor: 'pointer',
+          }}
           animate={control}
           variants={containerVariants}
           initial="hidden"
           whileHover="hoverDefault"
           whileTap="tapDefault"
+          dragConstraints={refContainerDrag}
+          dragElastic={0.05}
           ref={myRefSkills}
+          drag
         >
           My Skills
         </motion.h1>
