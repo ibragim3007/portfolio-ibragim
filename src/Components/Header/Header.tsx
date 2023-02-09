@@ -44,7 +44,7 @@ const Header: React.FC = () => {
         initial={{
           x: -850,
           rotateY: -150,
-          opacity: 0,
+          opacity: 0.1,
         }}
         animate={{
           x: -0,
