@@ -42,12 +42,14 @@ const Header: React.FC = () => {
       <motion.img
         variants={containerVariants}
         initial={{
-          x: -650,
+          x: -850,
           rotateY: -150,
+          opacity: 0,
         }}
         animate={{
           x: -0,
           rotateY: 0,
+          opacity: 1,
         }}
         transition={{
           duration: 2.2,
