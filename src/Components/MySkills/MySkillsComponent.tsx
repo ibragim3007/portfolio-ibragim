@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import { containerVariants } from '../../helper/AnimationStyle';
+import { useGetWidthDevice } from '../../Hooks/useGetWidthDevice';
 import cPPIcon from '../../Sourse/img/iconsSkills/c++Icon.png';
 import gitIcon from '../../Sourse/img/iconsSkills/gitIcon.png';
 import graphQlIcon from '../../Sourse/img/iconsSkills/graphQlIcon.png';
@@ -66,7 +67,6 @@ const MySkillsComponent: React.FC = () => {
   }, [control, textIsVisible]);
 
   const refContainerDrag = useRef(null);
-
   return (
     <div
       style={{

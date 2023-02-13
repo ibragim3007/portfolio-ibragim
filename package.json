@@ -45,7 +45,7 @@
     }
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "lint": "./node_modules/.bin/eslint . --ext .ts",
     "lint:fix": "./node_modules/.bin/eslint . --ext .ts --fix",
     "build": "react-scripts --openssl-legacy-provider build",
