@@ -103,7 +103,11 @@ const Header: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               animate={control}
-              style={{ maxWidth: 450, minWidth: 300, filter: 'drop-shadow(5px 5px 5px #000)' }}
+              style={{
+                maxWidth: 450,
+                minWidth: 300,
+                filter: 'drop-shadow(5px 5px 5px #000)',
+              }}
               src={myself}
               alt="me"
               whileHover="hoverDefault"

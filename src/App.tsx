@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import AboutMeComponent from './Components/AboutMe/AboutMeComponent';
+import CanvasAnim from './Components/AboutMe/CanvasAnim';
 import Header from './Components/Header/Header';
 import MySkillsComponent from './Components/MySkills/MySkillsComponent';
 import LoadingAnimate from './helper/LoadingAnimate/LoadingAnimate';
@@ -19,6 +21,8 @@ const App: React.FC = () => {
         <>
           <Header />
           <MySkillsComponent />
+          <AboutMeComponent />
+          <CanvasAnim />
         </>
       )}
     </div>
