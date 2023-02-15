@@ -4,7 +4,7 @@ import CanvasAnim from './Components/AboutMe/CanvasAnim';
 import Header from './Components/Header/Header';
 import MySkillsComponent from './Components/MySkills/MySkillsComponent';
 import PhoneNotSupported from './Components/PhoneNotSupported/PhoneNotSupported';
-import { LG, MD } from './config';
+import { MD } from './config';
 import LoadingAnimate from './helper/LoadingAnimate/LoadingAnimate';
 import { useGetWidthDevice } from './Hooks/useGetWidthDevice';
 import './index.css';
@@ -27,7 +27,7 @@ const App: React.FC = () => {
         <>
           <Header />
           <MySkillsComponent />
-          <AboutMeComponent />
+          <AboutMeComponent />ƒ
           <CanvasAnim />
         </>
       ) : (
