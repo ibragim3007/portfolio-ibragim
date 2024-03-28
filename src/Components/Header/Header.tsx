@@ -116,7 +116,7 @@ const Header: React.FC = () => {
             <InformationAboutMe />
           </Grid>
           <Grid xs={6} item style={{ marginTop: 70 }}>
-            <Grid style={{ maxWidth: 450 }} item>
+            <Grid style={{ maxWidth: 450, textAlign: 'center' }} item>
               <motion.h1
                 variants={containerVariants}
                 initial="hidden"
@@ -127,7 +127,8 @@ const Header: React.FC = () => {
                 whileHover="hoverDefault"
                 whileTap="tapDefault"
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, rerum.
+                <div>Hello!</div> My name <span style={{ borderBottom: '4px solid rgb(76, 201, 176)' }}>Ibragim</span>{' '}
+                <div style={{ marginLeft: 0 }}>and</div> I am software engenieer
               </motion.h1>
               <Grid style={{ marginTop: 50, marginBottom: 0 }}>
                 <h1 className="textPrinting">

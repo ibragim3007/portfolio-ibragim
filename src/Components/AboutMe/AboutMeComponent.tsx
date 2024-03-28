@@ -4,13 +4,14 @@ import React, { MouseEvent, useState } from 'react';
 import './aboutMeFont.css';
 
 const AboutMeComponent: React.FC = () => {
-  const [positionRadialGradient, setPositionRadialGradient] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [positionRadialGradient, setPositionRadialGradient] = useState<{ x: number; y: number }>({ x: 500, y: 500 });
   const handleChangePositionRadialGradientCircle = (e: MouseEvent<HTMLDivElement>): void => {
     setPositionRadialGradient({
       x: e.clientX,
       y: e.clientY,
     });
   };
+
   return (
     <motion.div
       onMouseMove={handleChangePositionRadialGradientCircle}
@@ -24,10 +25,10 @@ const AboutMeComponent: React.FC = () => {
         background: `radial-gradient(circle at ${positionRadialGradient.x}px ${positionRadialGradient.y}px, #00CC99 0%, #6600FF 100%)`,
       }}
       transition={{
-        duration: 0.1,
+        duration: '0.2s ease',
       }}
     >
-      <div style={{ marginLeft: 90, paddingTop: 50 }}>
+      <div style={{ paddingTop: 50, display: 'flex', justifyContent: 'center' }}>
         <Typography
           className="bebasNeueFont"
           variant="h1"
