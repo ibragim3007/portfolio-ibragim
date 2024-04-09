@@ -3,7 +3,7 @@ import { Container } from '@mui/system';
 import { motion, useAnimation } from 'framer-motion/dist/framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import { containerVariants } from '../../helper/AnimationStyle';
-import myself from '../../Sourse/img/assets/myself.png';
+import myself from '../../Sourse/img/assets/myself2.png';
 import backgroundImage from '../../Sourse/img/bgBlack.png';
 import bgMove from '../../Sourse/img/bgMove1.png';
 import './Header.css';
@@ -104,8 +104,9 @@ const Header: React.FC = () => {
               initial="hidden"
               animate={control}
               style={{
-                maxWidth: 450,
+                maxWidth: 350,
                 minWidth: 300,
+                borderRadius: '40% 33% 13% 40%',
                 filter: 'drop-shadow(5px 5px 5px #000)',
               }}
               src={myself}
